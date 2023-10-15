@@ -56,7 +56,12 @@ def main():
                             ''')
 
     elif app_mode == 'Detection':
-        components.iframe('https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO', width=1100, height=2000, scrolling=False)
+            # Define the URL
+            url = "https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO"
+            # Create HTML code to automatically open the URL
+            html_code = f'<script>window.open("https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO",  "width=1100", "height=2000", "scrolling=False");</script>'
+            # Display the HTML code
+            st.markdown(html_code, unsafe_allow_html=True)
 
 if __name__ == '__main__':
     try:
