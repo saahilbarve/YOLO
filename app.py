@@ -56,8 +56,12 @@ def main():
                             ''')
 
     elif app_mode == 'Detection':
-        st.iframe('https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO', width=1100, height=2000, scrolling=False)
-
+         st.title("Your Streamlit App")
+         st.components.v1.html(
+        '<iframe src="https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO"></iframe>',
+        width=1100,
+        height=2000,
+    )
 
 if __name__ == '__main__':
     try:
