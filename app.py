@@ -56,9 +56,10 @@ def main():
                             ''')
 
     elif app_mode == 'Detection':
-            url = "https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO"
-            html_code = f'<script>window.open("https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO",  "width=1100", "height=2000", "scrolling=False");</script>'
-            st.markdown(html_code, unsafe_allow_html=True)
+            st.write(
+        f'<iframe src="https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO", "width=1100", "height=2000", "scrolling=False"></iframe>',
+        unsafe_allow_html=True,
+    )
 
 if __name__ == '__main__':
     try:
