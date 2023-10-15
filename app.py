@@ -56,7 +56,7 @@ def main():
                             ''')
 
     elif app_mode == 'Detection':
-         iframe_code = '<iframe src="https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO" width="1100" height="2000" scrolling="no"></iframe>'
+         iframe_code = '<iframe src="https://detect.roboflow.com/?model=ai-vigil&version=2&api_key=04hq95FmAvbUh7YxNTvO" width="1100" height="2000" scrolling="no"></iframe>'
          st.write(iframe_code, unsafe_allow_html=True)
     
 
