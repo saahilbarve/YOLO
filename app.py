@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import  Image
 import tempfile
-from streamlit import components
+import streamlit.components.v1 as components
 
 
 
@@ -56,10 +56,8 @@ def main():
                             ''')
 
     elif app_mode == 'Detection':
-            st.write(
-        f'<iframe src="https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO", "width=1100", "height=2000", "scrolling=False"></iframe>',
-        unsafe_allow_html=True,
-    )
+        components.iframe('https://detect.roboflow.com/?model=traffic-accident-yolo8&version=1&api_key=04hq95FmAvbUh7YxNTvO', width=1100, height=2000, scrolling=False)
+
 
 if __name__ == '__main__':
     try:
