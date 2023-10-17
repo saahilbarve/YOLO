@@ -7,7 +7,7 @@ import streamlit.components.v1 as components
 
 def main():
    
-    st.title("Object Detection with YOLO-NAS")
+    st.title("Object Detection with YOLO")
     st.sidebar.title("Settings")
     st.sidebar.subheader("Parameters")
     st.markdown(
@@ -28,7 +28,7 @@ def main():
     app_mode = st.sidebar.selectbox('Choose the App Mode', ['About App', 'Detection'])
 
     if app_mode == 'About App':
-        st.markdown('In this project we are using **YOLOv8** to do Object Detection on Images and Videos and we are using **StreamLit** to create a Graphical User Interface ')
+        st.markdown('In this project we are using **YOLOv8** to do Object Detection on Images and Videos and we are using **StreamLit** to create a Graphical User Interface and Roboflow for Image modelling ')
         st.markdown(
             """
             <style>
